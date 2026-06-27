@@ -1,0 +1,479 @@
+{
+    "_comment_proyecto": "Monitor NARUTO CARD GAME (Bandai). Lanzamiento 2027, revelación completa 29-jul-2026, debut Gen Con 2026. Se vende en las MISMAS tiendas que One Piece (distribuidores Bandai TCG). Hasta que salga, muchas colecciones 'naruto' darán 404 y las búsquedas saldrán vacías: es normal, el monitor lo trata como warning. En cuanto la tienda cree la colección / liste la preventa, empieza a avisar.",
+    "telegram_bot_token": "USE_GITHUB_SECRET",
+    "telegram_chat_id": "USE_GITHUB_SECRET",
+    "check_interval_minutes": 15,
+    "check_interval_high_minutes": 5,
+    "notify_only_in_stock": true,
+    "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "_comment_required": "Solo se notifica si el título contiene 'naruto'. ナルト para imports JP. Tras el reveal del 29-jul-2026 añade aquí el código de set (p.ej. 'NT-01', 'OP'-style) cuando se conozca.",
+    "required_keywords": [
+        "naruto",
+        "ナルト",
+        "うずまき"
+    ],
+    "_comment_exclude": "Descarta el VIEJO Naruto CCG (Bandai 2006-2011), el 'Naruto Mythos' (otra empresa), Weiss Schwarz Naruto y merch (figuras/manga/funko) que ensucian la búsqueda. Si algo legítimo se cuela en exclude, quítalo.",
+    "exclude_keywords": [
+        "mythos",
+        "ccg",
+        "collectible card game",
+        "weiss",
+        "schwarz",
+        "carddass",
+        "funko",
+        "nendoroid",
+        "figuarts",
+        "figura",
+        "figure",
+        "plush",
+        "peluche",
+        "manga",
+        "blu-ray"
+    ],
+    "_comment_high_value": "Productos que se marcan 🚨 y se muestran primero: cases y booster boxes (lo que más interesa).",
+    "high_value_keywords": [
+        "case",
+        "booster box",
+        "booster case",
+        "display",
+        "sealed case",
+        "caja de sobres",
+        "caja sellada",
+        "carton",
+        "cartón",
+        "box case"
+    ],
+    "sites": [
+        {
+            "_comment": "=========================================================",
+            "_comment2": "=== HIGH — FEEDS DE PREVENTA MULTI-JUEGO (lo primero que listará Naruto). Filtrados por 'naruto'. ===",
+            "name": "Madrid Norte TCG (Preventas)",
+            "url": "https://madridnortetcg.com/collections/preventas-tcg/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Pokejotta (Pre-orders)",
+            "url": "https://pokejotta.com/collections/pre-orders/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "SparkLeaf (Pre-order, CH)",
+            "url": "https://sparkleaf.ch/collections/pokemon-one-piece-tcg-pre-order-deals/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "CardTreasure (Preorders, CH)",
+            "url": "https://cardtreasure.ch/collections/preorders/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "JapHunter (Preorder JP, CH)",
+            "url": "https://japhunter.ch/collections/preorder/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Factory Cards (Reservas/Preventa)",
+            "url": "https://factorycardstcg.com/en/collections/reservas-tcg-preventa-pokemon-one-piece-y-mas",
+            "type": "html",
+            "priority": "high",
+            "selector": ".product-card, .card-wrapper, .grid__item",
+            "title_selector": ".product-card-title, .card__heading, h3",
+            "link_selector": "a[href*='/products/']",
+            "price_selector": ".price, .price-item"
+        },
+        {
+            "name": "Pokezilla (Preventas)",
+            "url": "https://pokezilla.com/collections/preventas?sort_by=created-descending",
+            "type": "html",
+            "priority": "high",
+            "selector": ".product-card, .card-wrapper, .grid__item",
+            "title_selector": ".product-card-title, .card__heading, h3",
+            "link_selector": "a[href*='/products/']",
+            "price_selector": ".price, .price-item"
+        },
+
+        {
+            "_comment": "=== HIGH — COLECCIONES REALES DE PREVENTA/RESERVAS/NOVEDADES de tiendas Bandai (handles verificados vía /collections.json jun-2026). Naruto aparecerá aquí EN CUANTO abran preorder, sin depender de adivinar el handle. Es la red principal para cazar preventas. ===",
+            "name": "TodoHits (Reservas)",
+            "url": "https://todohits.com/collections/reservas/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "TodoHits (Novedades)",
+            "url": "https://todohits.com/collections/novedades/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "JJ Collection (Preventa)",
+            "url": "https://www.jjcollection.es/collections/preventa/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "CardZone (Reservas)",
+            "url": "https://cardzone.es/collections/reservas/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "CardZone (Novedades)",
+            "url": "https://cardzone.es/collections/novedades/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "TCG Level (Reservas)",
+            "url": "https://tcglevel.com/collections/reservas/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "TCG Level (Novedades)",
+            "url": "https://tcglevel.com/collections/novedades/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "AllInTCG (Reservas)",
+            "url": "https://allintcg.com/collections/reservas/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "AllInTCG (Novedades)",
+            "url": "https://allintcg.com/collections/novedades/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "FreakCorp (Novedades)",
+            "url": "https://freakcorp.com/collections/novedades/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Pokemillon (Reservas)",
+            "url": "https://www.pokemillon.com/collections/reservas/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Pokemillon (Novedades)",
+            "url": "https://www.pokemillon.com/collections/novedades/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Kantocards (Nuevos productos)",
+            "url": "https://kantocards.com/collections/nuevos-productos/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Madrid Norte TCG (Novedades)",
+            "url": "https://madridnortetcg.com/collections/novedades-destacadas/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "TCGHOBBY (Pre-order, TW)",
+            "url": "https://www.tcghobby.com/collections/pre-order/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Pixel and Block (New arrivals, UK)",
+            "url": "https://pixelandblock.co.uk/collections/new-arrivals/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Monster Card Corner (Sealed, UK)",
+            "url": "https://monstercardcorner.co.uk/collections/sealed/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+
+        {
+            "_comment": "=== HIGH — COLECCIONES NARUTO 'adivinadas' en tiendas Bandai (Shopify). Por analogía con sus handles de One Piece (one-piece-card-game). 404 hasta que la creen; auto-activan al lanzarse. ===",
+            "name": "FreakCorp (ES)",
+            "url": "https://freakcorp.com/collections/naruto-card-game/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "TodoHits (ES)",
+            "url": "https://todohits.com/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "JJ Collection (ES)",
+            "url": "https://www.jjcollection.es/collections/naruto-card-game/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "CardZone (ES)",
+            "url": "https://cardzone.es/collections/naruto-tcg/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "La Escotilla (ES)",
+            "url": "https://laescotillajuegos.com/collections/naruto-tcg/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "TCG Level (ES)",
+            "url": "https://tcglevel.com/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Kantocards (ES)",
+            "url": "https://kantocards.com/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Universe TCG (ES)",
+            "url": "https://www.universetcg.com/collections/naruto-card-game/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Pokemillon (ES)",
+            "url": "https://www.pokemillon.com/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "AllInTCG (ES)",
+            "url": "https://allintcg.com/collections/naruto-card-game/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Europe TCG (EU)",
+            "url": "https://europetcg.com/en/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Otakura (IT)",
+            "url": "https://otakura.com/en/collections/naruto-card-game/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Pixel and Block (UK)",
+            "url": "https://pixelandblock.co.uk/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Monster Card Corner (UK)",
+            "url": "https://monstercardcorner.co.uk/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "TCGHOBBY (TW)",
+            "url": "https://www.tcghobby.com/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+
+        {
+            "_comment": "=== HIGH — WooCommerce ES (búsqueda 'naruto', funciona desde el primer día, vacío hasta que listen). ===",
+            "name": "Empire Games (ES)",
+            "url": "https://www.empiregames.es/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Mono de Juegos (ES)",
+            "url": "https://www.monodejuegos.shop/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "ELIUS (ES)",
+            "url": "https://www.eliusweb.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Reino de Cartas (ES)",
+            "url": "https://reinodecartas.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "high"
+        },
+        {
+            "name": "Montalfan (ES)",
+            "url": "https://montalfan.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "high"
+        },
+
+        {
+            "_comment": "=========================================================",
+            "_comment2": "=== MEDIUM — WooCommerce ES/PT (búsqueda 'naruto'). Cobertura amplia. ===",
+            "name": "Friki de Nacimiento (ES)",
+            "url": "https://frikidenacimiento.es/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "Friki Galaxy (ES)",
+            "url": "https://frikigalaxy.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "Tienda Mulligan (ES)",
+            "url": "https://shop.tiendamulligan.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "TopDeck (ES)",
+            "url": "https://topdeck.es/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "Arena Games (ES)",
+            "url": "https://arenagames.es/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "Manavortex (ES)",
+            "url": "https://manavortex.es/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "Esfantasia (ES)",
+            "url": "https://esfantasia.es/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "Micelion Games (ES)",
+            "url": "https://miceliongames.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "KuriGames (ES)",
+            "url": "https://kurigames.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "Asturcards (ES)",
+            "url": "https://www.asturcards.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "CardCrack (ES)",
+            "url": "https://cardcrack.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "The Golden Rabbit (ES)",
+            "url": "https://thegoldenrabbitshop.es/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "Sweet Cards Valencia (ES)",
+            "url": "https://sweetcardsvalencia.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "HoloPlaza TCG (ES)",
+            "url": "https://holoplazatcg.com/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "TCG Portugal (PT)",
+            "url": "https://tcgportugal.com/wp-json/wc/store/v1/products?per_page=100&search=naruto&orderby=date",
+            "type": "api",
+            "priority": "medium"
+        },
+
+        {
+            "_comment": "=== MEDIUM — PrestaShop ES (búsqueda 'naruto', funciona desde Actions). ===",
+            "name": "La Cueva Roja (ES)",
+            "url": "https://lacuevaroja.com/buscar?s=naruto",
+            "type": "html",
+            "priority": "medium",
+            "selector": "#js-product-list .product-miniature",
+            "title_selector": ".product-title",
+            "link_selector": "a",
+            "price_selector": ".price"
+        },
+        {
+            "name": "Dungeon Marvels (ES)",
+            "url": "https://dungeonmarvels.com/buscar?controller=search&s=naruto",
+            "type": "html",
+            "priority": "medium",
+            "selector": "#js-product-list .product-miniature",
+            "title_selector": ".product-title",
+            "link_selector": "a",
+            "price_selector": ".price"
+        },
+        {
+            "name": "Distrito Zero (ES)",
+            "url": "https://distritozero.es/buscar?controller=search&s=naruto",
+            "type": "html",
+            "priority": "medium",
+            "selector": "#js-product-list .product-miniature",
+            "title_selector": ".product-title",
+            "link_selector": "a",
+            "price_selector": ".price"
+        },
+
+        {
+            "_comment": "=== MEDIUM — IMPORT JP (Shopify, envían internacional, EN). Colección naruto adivinada. ===",
+            "name": "JumpIchiban (JP)",
+            "url": "https://jumpichiban.com/collections/naruto-card-game/products.json?limit=250",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "CardOtaku (JP)",
+            "url": "https://cardotaku.com/collections/naruto-card-game/products.json?limit=250",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "TCG Corner (JP)",
+            "url": "https://tcg-corner.com/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "medium"
+        },
+        {
+            "name": "Otakura alt handle (IT)",
+            "url": "https://otakura.com/en/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "medium"
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+name: Heartbeat diario Naruto
+
+on:
+  schedule:
+    - cron: '10 23 * * *'  # 23:10 UTC (tras los de Pokémon 23:00 y OP 23:05)
+  workflow_dispatch:
+
+jobs:
+  beat:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - uses: actions/cache/restore@v5
+        with:
+          path: state.json
+          key: monitor-state
+          restore-keys: monitor-state-
+      - env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 heartbeat.py
+      - name: Keep-alive commit (evita que GitHub pause los crons por inactividad)
+        run: |
+          date -u +"%Y-%m-%d %H:%M UTC" > .last_heartbeat
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .last_heartbeat
+          git diff --staged --quiet || git commit -m "heartbeat: keep-alive [skip ci]"
+          git push
