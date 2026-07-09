@@ -257,6 +257,13 @@
             "priority": "high"
         },
         {
+            "_comment": "Sunny Store (Shopify ES). Hoy la colección son CCG viejo de Bandai, PSA y Naruto Mythos → todo cae en exclude_keywords ('ccg', 'mythos'). Queda de vigía para cuando entre el Naruto Card Game de Bandai.",
+            "name": "Sunny Store (ES)",
+            "url": "https://sunnystore.es/collections/naruto/products.json?limit=250",
+            "type": "api",
+            "priority": "high"
+        },
+        {
             "name": "AllInTCG (ES)",
             "url": "https://allintcg.com/collections/naruto-card-game/products.json?limit=250",
             "type": "api",
