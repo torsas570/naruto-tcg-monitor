@@ -1,8 +1,11 @@
 name: Monitor Naruto HIGH (preventas + cases) - cada 5 min
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
+  # Cron DESACTIVADO: el monitor continuo (monitor-continuo.yml) ya vigila TODAS
+  # las tiendas cada ~1-2 min. Dejarlo activo duplicaria el trabajo y competiria
+  # por el state.json cacheado. Se mantiene lanzable a mano.
+  # schedule:
+  #   - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:

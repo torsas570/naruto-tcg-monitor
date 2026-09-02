@@ -1,8 +1,11 @@
 name: Monitor Naruto Card Game
 
 on:
-  schedule:
-    - cron: '*/15 * * * *'  # Cada 15 minutos (todas las tiendas)
+  # Cron DESACTIVADO: el monitor continuo (monitor-continuo.yml) ya vigila TODAS
+  # las tiendas cada ~1-2 min. Dejarlo activo duplicaria el trabajo y competiria
+  # por el state.json cacheado. Se mantiene lanzable a mano.
+  # schedule:
+  #   - cron: '*/15 * * * *'  # Cada 15 minutos (todas las tiendas)
   workflow_dispatch:
 
 jobs:
