@@ -391,7 +391,7 @@
     },
     {
       "name": "Manavortex (ES)",
-      "url": "https://manavortex.es/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
+      "url": "https://manavortex.es/wp-json/wc/store/v1/products?per_page=100&search=naruto&orderby=date",
       "type": "api",
       "priority": "medium"
     },
