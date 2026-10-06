@@ -66,7 +66,9 @@
     "dvd",
     "calcetines",
     "tubbz",
-    "blind box"
+    "blind box",
+    "smriti",
+    "shinobi shiren"
   ],
   "_comment_required_any": "Segundo filtro (Y lógico): además de 'naruto', el título debe llevar un término de juego de cartas. Quita el merch de las búsquedas generalistas (llaveros, tazas, cómics, DVDs...).",
   "required_any_keywords": [
@@ -124,19 +126,6 @@
       "url": "https://madridnortetcg.com/collections/preventas-tcg/products.json?limit=250",
       "type": "api",
       "priority": "high"
-    },
-    {
-      "name": "Pokejotta (Pre-orders)",
-      "url": "https://pokejotta.com/collections/pre-orders/products.json?limit=250",
-      "type": "api",
-      "priority": "high"
-    },
-    {
-      "name": "SparkLeaf (Pre-order, CH)",
-      "url": "https://sparkleaf.ch/collections/pokemon-one-piece-tcg-pre-order-deals/products.json?limit=250",
-      "type": "api",
-      "priority": "high",
-      "currency": " CHF"
     },
     {
       "name": "CardTreasure (Preorders, CH)",
@@ -238,13 +227,6 @@
       "priority": "high"
     },
     {
-      "name": "Kantocards (Nuevos productos)",
-      "url": "https://kantocards.com/collections/nuevos-productos/products.json?limit=250",
-      "type": "api",
-      "priority": "high",
-      "currency": " MXN"
-    },
-    {
       "name": "Madrid Norte TCG (Novedades)",
       "url": "https://madridnortetcg.com/collections/novedades-destacadas/products.json?limit=250",
       "type": "api",
@@ -274,121 +256,115 @@
     {
       "_comment": "=== HIGH — CATÁLOGO COMPLETO Shopify (/products.json, lo último publicado primero). Sustituye a las colecciones 'adivinadas': Shopify responde 200 con lista vacía si el handle no existe, así que eran indistinguibles de 'aún no hay nada'. Con esto se ve cualquier producto nuevo de la tienda, esté en la colección que esté. limit=100 basta con ~1 pasada/min. ===",
       "name": "FreakCorp (catálogo)",
-      "url": "https://freakcorp.com/products.json?limit=100",
+      "url": "https://freakcorp.com/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "TodoHits (catálogo)",
-      "url": "https://todohits.com/products.json?limit=100",
+      "url": "https://todohits.com/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "JJ Collection (catálogo)",
-      "url": "https://www.jjcollection.es/products.json?limit=100",
+      "url": "https://www.jjcollection.es/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "CardZone (catálogo)",
-      "url": "https://cardzone.es/products.json?limit=100",
+      "url": "https://cardzone.es/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "La Escotilla (catálogo)",
-      "url": "https://laescotillajuegos.com/products.json?limit=100",
+      "url": "https://laescotillajuegos.com/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "TCG Level (catálogo)",
-      "url": "https://tcglevel.com/products.json?limit=100",
+      "url": "https://tcglevel.com/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "Kantocards (catálogo)",
-      "url": "https://kantocards.com/products.json?limit=100",
+      "url": "https://kantocards.com/products.json?limit=250",
       "type": "api",
       "priority": "high",
       "currency": " MXN"
     },
     {
       "name": "Universe TCG (catálogo)",
-      "url": "https://www.universetcg.com/products.json?limit=100",
+      "url": "https://www.universetcg.com/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "Pokemillon (catálogo)",
-      "url": "https://www.pokemillon.com/products.json?limit=100",
+      "url": "https://www.pokemillon.com/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "AllInTCG (catálogo)",
-      "url": "https://allintcg.com/products.json?limit=100",
-      "type": "api",
-      "priority": "high"
-    },
-    {
-      "name": "Europe TCG (EU) (catálogo)",
-      "url": "https://europetcg.com/products.json?limit=100",
+      "url": "https://allintcg.com/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "Otakura (IT) (catálogo)",
-      "url": "https://otakura.com/products.json?limit=100",
+      "url": "https://otakura.com/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "Pixel and Block (UK) (catálogo)",
-      "url": "https://pixelandblock.co.uk/products.json?limit=100",
+      "url": "https://pixelandblock.co.uk/products.json?limit=250",
       "type": "api",
       "priority": "high",
       "currency": "£"
     },
     {
       "name": "Monster Card Corner (UK) (catálogo)",
-      "url": "https://monstercardcorner.co.uk/products.json?limit=100",
+      "url": "https://monstercardcorner.co.uk/products.json?limit=250",
       "type": "api",
       "priority": "high",
       "currency": "£"
     },
     {
       "name": "TCGHOBBY (TW) (catálogo)",
-      "url": "https://www.tcghobby.com/products.json?limit=100",
+      "url": "https://www.tcghobby.com/products.json?limit=250",
       "type": "api",
       "priority": "high",
       "currency": "$"
     },
     {
       "name": "Evolution TCG (NL) (catálogo)",
-      "url": "https://evlutcg.com/products.json?limit=100",
+      "url": "https://evlutcg.com/products.json?limit=250",
       "type": "api",
       "priority": "high"
     },
     {
       "name": "JumpIchiban (JP) (catálogo)",
-      "url": "https://jumpichiban.com/products.json?limit=100",
+      "url": "https://jumpichiban.com/products.json?limit=250",
       "type": "api",
       "priority": "medium",
       "currency": "$"
     },
     {
       "name": "CardOtaku (JP) (catálogo)",
-      "url": "https://cardotaku.com/products.json?limit=100",
+      "url": "https://cardotaku.com/products.json?limit=250",
       "type": "api",
       "priority": "medium",
       "currency": "¥"
     },
     {
       "name": "TCG Corner (JP) (catálogo)",
-      "url": "https://tcg-corner.com/products.json?limit=100",
+      "url": "https://tcg-corner.com/products.json?limit=250",
       "type": "api",
       "priority": "medium",
       "currency": "$"
@@ -431,7 +407,8 @@
       "name": "Friki de Nacimiento (ES)",
       "url": "https://frikidenacimiento.es/wp-json/wc/store/v1/products?per_page=50&search=naruto&orderby=date",
       "type": "api",
-      "priority": "medium"
+      "priority": "medium",
+      "cookie_challenge": true
     },
     {
       "name": "Friki Galaxy (ES)",
@@ -552,6 +529,61 @@
       "title_selector": ".product-title",
       "link_selector": "a",
       "price_selector": ".price"
+    },
+    {
+      "_comment": "=== Añadidas 06/10/2026, verificadas desde GitHub Actions (las que dan 403/404/corte desde Actions se dejaron fuera: Gameria, HeroFreaks, Losers Club, Vinticards, Nin-Nin-Game, Flashstore). ===",
+      "name": "Kabenzots (Reservas)",
+      "url": "https://kabenzots.com/wp-json/wc/store/v1/products?per_page=100&orderby=date&order=desc&category=137",
+      "type": "api",
+      "priority": "high"
+    },
+    {
+      "name": "Kabenzots (TCG)",
+      "url": "https://kabenzots.com/wp-json/wc/store/v1/products?per_page=100&orderby=date&order=desc&category=2830",
+      "type": "api",
+      "priority": "medium"
+    },
+    {
+      "name": "Fridam Store (Próximamente)",
+      "url": "https://fridamstore.com/collections/proximamente/products.json?limit=250",
+      "type": "api",
+      "priority": "high"
+    },
+    {
+      "name": "Universe TCG (Naruto Card Game)",
+      "url": "https://www.universetcg.com/collections/naruto-card-game/products.json?limit=250",
+      "type": "api",
+      "priority": "high"
+    },
+    {
+      "name": "PixelHeart (Naruto, FR)",
+      "url": "https://www.pixelheart.eu/wp-json/wc/store/v1/products?per_page=100&orderby=date&order=desc&search=naruto%20card%20game",
+      "type": "api",
+      "priority": "high"
+    },
+    {
+      "name": "Fantasia Cards (Preventas, DE)",
+      "url": "https://fantasiacards.de/collections/vorbestellungen/products.json?limit=250",
+      "type": "api",
+      "priority": "high"
+    },
+    {
+      "name": "Boostr Club (Naruto CG, FR)",
+      "url": "https://boostrclub.com/collections/naruto-card-game/products.json?limit=250",
+      "type": "api",
+      "priority": "high"
+    },
+    {
+      "name": "Metamorph Center (Reservas)",
+      "url": "https://metamorphcenter.com/collections/reservas/products.json?limit=250",
+      "type": "api",
+      "priority": "high"
+    },
+    {
+      "name": "Arte9 (Próximamente)",
+      "url": "https://arte9.com/wp-json/wc/store/products?per_page=100&orderby=date&order=desc&category=284",
+      "type": "api",
+      "priority": "high"
     }
   ]
 }
