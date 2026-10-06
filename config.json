@@ -118,6 +118,17 @@
     "binder",
     "carpeta"
   ],
+  "_comment_official": "Webs oficiales: lo nuevo se avisa con '📰 novedad oficial' semanas antes de las preventas, y sus códigos de set (set_code_pattern) pasan 60 días a prioridad 📅: un listado de tienda con ese código suena aunque su título no diga caja/box.",
+  "official_sources": [
+    {
+      "name": "Web oficial Naruto CG (noticias)",
+      "url": "https://www.naruto-cardgame.com/en/news/article-list.php",
+      "selector": "li.newsListItem",
+      "title_selector": ".cardTitle",
+      "link_selector": "a.cardBox",
+      "info_selector": ".cardInfo"
+    }
+  ],
   "sites": [
     {
       "_comment": "=========================================================",
@@ -584,6 +595,25 @@
       "url": "https://arte9.com/wp-json/wc/store/products?per_page=100&orderby=date&order=desc&category=284",
       "type": "api",
       "priority": "high"
+    },
+    {
+      "_comment": "=== Secundarias añadidas 06/10/2026, verificadas desde Actions (CardCenter da 403 desde Actions y Chaos Cards también desde casa: fuera). ===",
+      "name": "Industria61 (Naruto)",
+      "url": "https://industria61.com/wp-json/wc/store/v1/products?per_page=100&orderby=date&order=desc&category=143",
+      "type": "api",
+      "priority": "medium"
+    },
+    {
+      "name": "ZIAL TCG (Preventa)",
+      "url": "https://zialtcg.com/wp-json/wc/store/v1/products?per_page=100&orderby=date&order=desc&category=199",
+      "type": "api",
+      "priority": "medium"
+    },
+    {
+      "name": "Saruman Games (catálogo)",
+      "url": "https://sarumangames.es/products.json?limit=250",
+      "type": "api",
+      "priority": "medium"
     }
   ]
 }
