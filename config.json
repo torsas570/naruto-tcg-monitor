@@ -129,6 +129,11 @@
       "info_selector": ".cardInfo"
     }
   ],
+  "vip": {
+    "_comment": "Grupo de importantes (secret TELEGRAM_VIP_CHAT_ID): de Naruto va TODO, también lo que se lista ya agotado (preventas).",
+    "all": true,
+    "include_sold_out": true
+  },
   "sites": [
     {
       "_comment": "=========================================================",
